@@ -40,3 +40,27 @@ if (validatePassword(password)) {
 } else {
     console.log("❌ Password is invalid");
 }
+
+// array
+let simple_array = ['nasr', 'is', 'cool']
+console.log(simple_array[3])
+
+// by index location
+simple_array[3] = 'right?'
+console.log(simple_array)
+
+// push
+simple_array.push('and')
+console.log(simple_array)
+
+// pop
+simple_array.pop()
+console.log(simple_array)
+
+// join
+let joined_string = simple_array.join('_')
+console.log(joined_string)
+
+// reverse
+let reversed_array = simple_array.reverse()
+console.log(reversed_array)
