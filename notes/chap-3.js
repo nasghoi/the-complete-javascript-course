@@ -64,3 +64,32 @@ console.log(joined_string)
 // reverse
 let reversed_array = simple_array.reverse()
 console.log(reversed_array)
+
+// sort
+let dimension_array = [[[3], []], [[], []], [[]]]
+dimension_array[0][0][0] = 'hello world'
+console.log(dimension_array)
+
+let sorted_array = dimension_array.sort() 
+console.log(sorted_array)
+
+// let number_array = [[1, 2], [3, 4]]
+
+// for (let i = 0; i < number_array.length; i++) {
+//     let subArray = number_array[i];
+//     for (let j = 0; j < subArray.length; j++) {
+//         console.log(i, j, number_array[i][j])
+//     }
+// }
+
+let number_array = [1, 2, 3, 4, 5]
+
+// find the index location of 3
+let number_to_remove = number_array.indexOf(1)
+
+// ini sumpah gempak, nak cari nombor tu astu buang dari array tu
+let start_array = number_array.slice(0, number_to_remove)
+let end_array = number_array.slice(number_to_remove + 1)
+
+let new_number_array = start_array.concat(end_array)
+console.log(start_array, end_array, new_number_array)
