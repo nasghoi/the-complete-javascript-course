@@ -93,3 +93,50 @@ let end_array = number_array.slice(number_to_remove + 1)
 
 let new_number_array = start_array.concat(end_array)
 console.log(start_array, end_array, new_number_array)
+
+// dictionaries or objects
+const bio = {
+    name: 'nasr',
+    age: 25,
+    hobbies: ['coding', 'gaming', 'gym'],
+    friends: {
+        'nab': {
+            description: 'pretty',
+        }
+    }
+}
+
+let name_key = 'name'
+bio[name_key] = 'nasrul'
+let name = bio[name_key]
+
+bio['number_of_friends'] = 0
+
+if ('age' in bio) {
+    console.log('age exists')
+} else {
+    bio['age'] = null
+    console.log('age does not exist')
+}
+console.log(bio)
+
+// update using dot notation or bracket notation
+bio.age = 26
+console.log(bio['hobbies'][0], '/', bio.hobbies[1])
+
+delete bio['age']
+console.log(bio)
+console.log(bio.friends.nab.description, bio.friends['nab'].description, bio['friends']['nab']['description'])
+
+// access keys and values
+const keys_in_object = Object.keys(bio)
+console.log(keys_in_object)
+const values_in_object = Object.values(bio)
+console.log(values_in_object)
+
+// entries
+const entries_in_object = Object.entries(bio)
+console.log(entries_in_object)
+
+// non-exist key/value
+console.log(bio.joke, 'joke' in bio)
