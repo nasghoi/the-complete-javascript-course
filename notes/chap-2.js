@@ -13,3 +13,17 @@ let quotes = {
 
 console.log(quotes.nab)
 console.log(console) // this will print the console object
+
+function addStrings(string1 = 'default1', string2 = 'default2') {
+    let concatString = string1 + ' ' + string2
+    console.log(concatString)
+    return concatString
+}
+
+let newString = addStrings('hello')
+console.log('The new string is: ', newString)
+
+module.exports = {
+    addStrings,
+    quotes,
+}

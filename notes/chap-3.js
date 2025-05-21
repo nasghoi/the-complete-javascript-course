@@ -1,3 +1,5 @@
+const { addStrings, quotes } = require("./chap-2");
+
 // data manipulation
 let example_sentence = 'this is string'
 let string_length = example_sentence.length
@@ -140,3 +142,57 @@ console.log(entries_in_object)
 
 // non-exist key/value
 console.log(bio.joke, 'joke' in bio)
+
+// scope
+function helloWorld() {
+    let sentence = 'hello'
+    console.log(sentence)
+}
+helloWorld()
+
+// closure
+function counter() {
+    let count = 0
+
+    return function() {
+        count++
+        console.log(count)
+    }
+}
+
+let increment = counter()
+increment() // 1
+increment() // 2
+
+// write modular and reusable code
+addStrings('hello', 'world')
+console.log(quotes)
+
+// error handling and debugging
+const brokenObject = {
+    word: 'nice',
+}
+
+function problematicCodeBlock() {
+    try {
+        console.log('test') // debugging
+        const sub_object = brokenObject.hello.world
+        console.log(sub_object)
+    } catch (err) {
+        console.error(err.message)
+    }
+}
+
+problematicCodeBlock()
+console.log('code continues')
+
+function throwError() {
+    try {
+        throw new Error('custom error message')
+    } catch (err) {
+        console.error(err.message)
+    }
+}
+
+throwError()
+console.log('code continues')
