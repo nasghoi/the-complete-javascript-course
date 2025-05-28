@@ -55,4 +55,3 @@ const obj = new MyClass('nab')
 console.log(obj.name)
 obj.name = 'nas'
 console.log(obj.name)
-
