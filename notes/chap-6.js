@@ -1,9 +1,23 @@
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-console.log('start code')
+async function run() {
+    console.log('start code')
+    await sleep(2000)
+    console.log('half way')
+    await sleep(2000)
+    console.log('finished code')
+}
 
-const sleepStatus = sleep(2000)
+run()
 
-console.log(sleepStatus)
+async function fetchData() {
+    try {
+        const res = await fetch('https://dummyjson.com/products/1')
+        const data = await res.json()
+        console.log(data)
+    } catch (err) {
+        console.error(err.message)
+    }
+}
 
-console.log('Finished code')
+fetchData()
