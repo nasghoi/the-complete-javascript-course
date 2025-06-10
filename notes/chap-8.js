@@ -38,9 +38,23 @@ mergeSort(nums1, nums2)
 // 3. Find All Duplicates in an Array
 // Question: Given an array of integers where 1 ≤ a[i] ≤ n (n = size of the array), some elements appear twice and others appear once. Write a function that returns an array of all the elements that appear twice in the given array. You must achieve this with O(n) time complexity.
 
-let dummy_arr = [1, 2, 3, 5, 6, 2345, 43, 12, 412, 341, 234, 1, 2, 3, 4, 5]
+let dummy_arr = [1, 2, 3, 5, 6, 2345, 43, 12, 412, 341, 234, 1, 2, 3, 4, 5, 6]
 
+const isTwice = (nums) => {
+    let twice = []
+    let count_num = {}
+    for (let current_num of nums) {
+        // console.log(current_num)
+        if (current_num in count_num) {
+            twice.push(current_num)
+        } else {
+            count_num[current_num] = 1
+        }
+    }
+    console.log(twice)
+}
 
+isTwice(dummy_arr)
 
 // 4. Rotate Array
 // Question: Rotate an array to the right by k steps, where k is non-negative. 
