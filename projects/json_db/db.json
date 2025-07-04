@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Muhammad",
+        "age": 25,
+        "city": "Kuala Lumpur",
+        "country": "Malaysia",
+        "hobby": "coding"
+    },
+    {
+        "name": "Ahmad",
+        "age": 24,
+        "city": "Kuala Lereh",
+        "country": "Malaysia",
+        "hobby": "kidding"
+    },
+    {
+        "name": "Omar",
+        "age": 26,
+        "city": "Kuala Pasu",
+        "country": "Indonesia",
+        "hobby": "reading"
+    }
+]
